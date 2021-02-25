@@ -30,7 +30,9 @@ export const ChallengeProvider = ({ children }: ChallengeProvider) => {
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
-  const levelUp = () => {};
+  const levelUp = () => {
+    setLevel(level + 1);
+  };
 
   const startNewChallenge = () => {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
