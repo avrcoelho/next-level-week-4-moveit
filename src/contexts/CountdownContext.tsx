@@ -21,8 +21,9 @@ interface CountdownProviderProps {
   children: ReactNode;
 }
 
-const CountdownContext = createContext({} as CountdownContextData);
 let countdownTimeout: NodeJS.Timeout;
+
+export const CountdownContext = createContext({} as CountdownContextData);
 
 export const CountdownProvider = ({ children }: CountdownProviderProps) => {
   const [time, setTime] = useState(0.05 * 60);
