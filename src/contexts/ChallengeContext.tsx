@@ -14,13 +14,13 @@ interface ChallengeContextData {
   completeChallenge(): void;
 }
 
-interface ChallengeProvider {
+interface ChallengeProviderProps {
   children: ReactNode;
 }
 
 export const ChallehngeContext = createContext({} as ChallengeContextData);
 
-export const ChallengeProvider = ({ children }: ChallengeProvider) => {
+export const ChallengeProvider = ({ children }: ChallengeProviderProps) => {
   const [level, setLevel] = useState(1);
   const [currentExperience, setCurrentExperience] = useState(0);
   const [chanllengeCompleted, setChanllengeCompleted] = useState(0);
