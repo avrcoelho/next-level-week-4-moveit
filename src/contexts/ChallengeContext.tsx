@@ -1,6 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
+import { LevelUpModal } from "../components/LevelUpModal";
+
 import challenges from "../../challenges.json";
 
 interface ChallengeContextData {
@@ -106,6 +108,8 @@ export const ChallengeProvider = ({
       }}
     >
       {children}
+
+      <LevelUpModal />
     </ChallehngeContext.Provider>
   );
 };
